@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="img/insta_icon.png" type="image/x-icon">
+
+        <title>Instagram</title>
+    </head>
+
+    <body>
+
+        <section class="phone">
+            <img src="img/phone_insta.png" alt="imagem de telefone com app instagram aberto." />
+            <div class="carrousel_photos" id="carr_photos">
+                <img src="img/carrousel_photos.png" id="carr1">
+                <img src="img/carrousel_photos2.png" id="carr2" style="display: none;">
+                <img src="img/carrousel_photos3.png" id="carr3" style="display: none;">
+                <img src="img/carrousel_photos4.png" id="carr4" style="display: none;">
+            </div>
+            <!--carrousel_photos-->
+        </section>
+        <!--phone-->
+
+        <section>
+            <div class="login">
+                <img src="img/insta_logo.png" alt="Logo do Instagram." />
+
+                <div class="profile_photo">
+                    <img src="img/myProfile_photo.jpg" alt="Imagem de perfil do usuário." />
+                </div>
+                <!--profile_photo-->
+
+                <a href="#" class="links login_">Continuar como willian_raniere</a>
+                <a href="#" class="links logout">Remover conta</a>
+
+            </div>
+            <!--login-->
+
+            <div class="login">
+
+                <p class="text">
+                    Não é willian_raniere ?
+                </p>
+
+                <p class="text">
+                    <a href="#" class="links">Trocar de Conta</a> ou
+                    <a href="#" class="links">Registrar-se</a>
+                </p>
+
+            </div>
+            <!--login-->
+
+            <footer>
+                Baixe o app.
+                <div class="downloads">
+
+                    <a href="#">
+                        <img src="img/apple_logo.png" alt="Imagem para baixar o app na apple store." />
+                    </a>
+
+                    <a href="#">
+                        <img src="img/store_logo.png" alt="Imagem para baixar o app no play store." />
+                    </a>
+
+                </div>
+            </footer>
+        </section>
+
+        <script type="text/javascript">
+            let element1 = document.getElementById("carr1");
+            let element2 = document.getElementById("carr2");
+            let element3 = document.getElementById("carr3");
+            let element4 = document.getElementById("carr4");
+            let carr = document.getElementById("carr_photos");
+            let index = 0;
+
+            setInterval(function () {
+
+                if (index == 0) {
+                    index++
+                    element1.style.display = "none";
+                    element2.style.display = "flex";
+                } else if (index == 1) {
+                    index++
+                    element2.style.display = "none";
+                    element3.style.display = "flex";
+                } else if (index == 2) {
+                    index++
+                    element3.style.display = "none";
+                    element4.style.display = "flex";
+                } else if (index == 3) {
+                    index++
+                    element4.style.display = "none";
+                    element1.style.display = "flex";
+                }
+                if (index == 4) {
+                    index = 0;
+                }
+
+            }, 4000);
+
+        </script>
+
+    </body>
+
+</html>
